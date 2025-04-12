@@ -20,9 +20,4 @@ class AtributosBasicos:
             self.mana = mana
         else:
             self.mana = self.base_player
-        
-        
-teste = AtributosBasicos(5,12,13, 100, 10)
 
-print(teste.estaminaBase,"/",teste.estamina)
-print(teste.manaBase,"/",teste.mana)
