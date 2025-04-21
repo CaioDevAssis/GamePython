@@ -14,6 +14,7 @@ class AtributosBasicos:
             self.estamina = estamina
         else:
             self.estamina = self.base_player
+
         
         self.setManaBase()
         if (mana < self.manaBase):
@@ -28,12 +29,42 @@ class AtributosBasicos:
     def setEstaminaBase(self):
         self.estaminaBase = self.setAtributos(self.forca)
         
+    def setEstamina(self, estamina):        
+        if ( (self.estamina + estamina) < self.estaminaBase):
+            
+            if ( (self.estamina + estamina)> 0 ):            
+                self.estamina += estamina
+            else:
+                self.estamina = 0
+        else:
+            self.estamina = self.estaminaBase
+        
+        
     def setManaBase(self):
         self.manaBase = self.setAtributos(self.inteligencia)
         
+    def setMana(self, mana):        
+        if ( (self.mana + mana) < self.manaBase):
+            
+            if ( (self.mana + mana)> 0 ):            
+                self.mana += mana
+            else:
+                self.mana = 0
+        else:
+            self.mana = self.mana
+        
+        
+    def Prints(self):
+        print("\nNivel: ",self.nivel," Forca: ", self.forca, " Inteligencia: ", self.inteligencia)
+        print("Estamina: ",self.estamina,"/",self.estaminaBase," -- Mana: ", self.mana,"/",self.manaBase)
+        
 
 
-teste = AtributosBasicos(1,12,10,30,30)
+teste = AtributosBasicos(1,1,1,50,50)
 
-print(teste.estaminaBase)
-print(teste.manaBase)
+teste.Prints()
+
+teste.setEstamina(23)
+teste.setMana(-15)
+
+teste.Prints()
