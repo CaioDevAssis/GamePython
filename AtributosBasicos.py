@@ -29,6 +29,9 @@ class AtributosBasicos:
     def setEstaminaBase(self):
         self.estaminaBase = self.setAtributos(self.forca)
         
+    def getEstaminaBase(self):
+        return self.estaminaBase
+        
     def setEstamina(self, estamina): 
         if (estamina >= 0):
             if ( (self.estamina + estamina) < self.estaminaBase):
@@ -40,6 +43,9 @@ class AtributosBasicos:
                  self.estamina += estamina
             else:
                 self.estamina = 0
+        
+    def getEstamina(self):
+        return self.estamina
         
         
     def setManaBase(self):
@@ -56,7 +62,10 @@ class AtributosBasicos:
                  self.mana += mana
             else:
                 self.mana = 0
-                
+    def getManaBase(self):
+        return self.manaBase
+    
+    
     def setNivel(self, nivel):
         self.nivel = nivel
         self.setEstaminaBase()
