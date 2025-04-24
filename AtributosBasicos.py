@@ -51,6 +51,9 @@ class AtributosBasicos:
     def setManaBase(self):
         self.manaBase = self.setAtributos(self.inteligencia)
         
+    def getManaBase(self):
+        return self.manaBase
+        
     def setMana(self, mana): 
         if (mana >= 0):
             if ( (self.mana + mana) < self.manaBase):
@@ -62,8 +65,9 @@ class AtributosBasicos:
                  self.mana += mana
             else:
                 self.mana = 0
-    def getManaBase(self):
-        return self.manaBase
+
+    def getMana(self):
+        return self.mana
     
     
     def setNivel(self, nivel):
