@@ -1,21 +1,18 @@
 import os
 
-import PosicaoBase
+import XpBase
 
 os.system('cls')
 print("iniciando teste ... ")
 
 
-teste = PosicaoBase.PosicaoBase(0, 0, 1, 1)
+teste = XpBase.XpBase(0)
 
 teste.Prints()
 
-print("\nAlterando valores ... \n")
+print("\nAlterando valor ...\n")
 
-teste.setPxBase(5)
-teste.setPx(-8)
-teste.setPyBase(-9)
-teste.setPy(23)
+teste.setXpTotal(15)
 
 teste.Prints()
 
