@@ -2,7 +2,7 @@
 
 class PosicaoBase:
     
-    def __init__(self pxBase, pyBase, px, py):
+    def __init__(self, pxBase, pyBase, px, py):
         
         self.pxBase = pxBase
         self.pyBase = pyBase
@@ -27,8 +27,14 @@ class PosicaoBase:
     def getPyBase(self):
         return self.pyBase
         
-    def selPy(self, py):
+    def setPy(self, py):
         self.py = py
         
     def getPy(self):
         return self.py
+        
+    def Prints(self):
+        print("pxBase: ",self.pxBase,"\t|")
+        print("px: \t", self.px,"\t|")
+        print("pyBase: ",self.pyBase,"\t|")
+        print("py: \t",self.py,"\t|")

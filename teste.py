@@ -1,12 +1,21 @@
-import AtributosBasicos
+import os
 
-teste = AtributosBasicos.AtributosBasicos(1,1,1,50,50)
+import PosicaoBase
+
+os.system('cls')
+print("iniciando teste ... ")
+
+
+teste = PosicaoBase.PosicaoBase(0, 0, 1, 1)
 
 teste.Prints()
 
-teste.setEstamina(-23)
-teste.setMana(-9)
+print("\nAlterando valores ... \n")
 
-teste.setNivel(9)
+teste.setPxBase(5)
+teste.setPx(-8)
+teste.setPyBase(-9)
+teste.setPy(23)
 
 teste.Prints()
+
