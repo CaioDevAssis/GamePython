@@ -1,29 +1,29 @@
 import os
 
+
+import PosicaoBase
 import XpBase
+import AtributosBasicos
+
+import PersonagemBase
+
+posicao = PosicaoBase.PosicaoBase(0, 0, 0, 0) #  -- pxBase, pyBase, px, py
+pontos = XpBase.XpBase(0, 0, 0) # -- xpTotal, nivel, xpGanha
+atributos = AtributosBasicos.AtributosBasicos(0, 0, 0, 45, 34) # --  nivel, forca, inteligencia, estamina, mana
+
 
 os.system('cls')
 print("iniciando teste ... ")
 
-
-teste = XpBase.XpBase(0, 0, 0)
-
-teste.Prints()
-
-print("\nAlterando valor ...\n")
-
-teste.setXpGanha(350)
-
-teste.Prints()
+personagem = PersonagemBase.PersonagemBase(atributos)
+personagem.setAtributosForca(5)
+personagem.setAtributosInteligencia(5)
 
 
-print("\nAlterando valor ...\n")
+personagem.Prints()
 
-teste.setXpGanha(350)
-
-teste.Prints()
-
-for x in range(10):
-    teste.setXpGanha(157)
-    teste.Prints()
-    
+for x in range(15):
+    personagem.setAtributosForca(x)
+    personagem.setAtributosInteligencia(x)
+    personagem.setAtributosNivel();
+    personagem.Prints()

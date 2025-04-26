@@ -71,7 +71,7 @@ class AtributosBasicos:
     
     
     def setNivel(self, nivel):
-        self.nivel = nivel
+        self.nivel += nivel
         self.setEstaminaBase()
         self.setManaBase()
         self.estamina = self.estaminaBase
@@ -82,12 +82,14 @@ class AtributosBasicos:
         
     def setForca(self, valor):
         self.forca += valor
+        self.setEstaminaBase()
     
     def getForca(self):
         return self.forca
         
     def setInteligencia(self, valor):
         self.inteligencia += valor
+        self.setManaBase()
         
     def getInteligencia(self):
         return self.inteligencia
