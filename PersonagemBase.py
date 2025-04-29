@@ -55,6 +55,11 @@ class PersonagemBase:
     def getXpProximoNivel(self):
         return self.xp.getXpProximoNivel() 
 
+    def setXpGanha(self, xpGanha):
+        resultado = self.xp.setXpGanha(xpGanha)
+        if resultado == 1:
+            self.atributos.setNivel(1)
+    
     def getXpGanha(self):
         return self.xp.getXpGanha()
         
@@ -66,6 +71,6 @@ class PersonagemBase:
         " | Forca: ", self.getAtributosForca()," | Inteligencia: ",self.getAtributosInteligencia()
                 )
         print(
-            "XpTotal: ",self.getXpTotal(), " | Proximo nivel: ",self.getXpProximoNivel(),"/",self.getXpGanha()," Xpganha"
-        
+            "XpTotal: ",self.getXpTotal(), " | Proximo nivel: ",self.getXpProximoNivel(),"/",self.getXpGanha()," Xpganha",
+            
         )

@@ -17,7 +17,9 @@ print("iniciando teste ... ")
 
 personagem = PersonagemBase.PersonagemBase(atributos, pontos)
 
+for x in range(6):
+    personagem.setXpGanha(250)
+    personagem.Prints()
 
-personagem.Prints()
 
 
