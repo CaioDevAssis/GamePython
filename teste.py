@@ -15,9 +15,10 @@ atributos = AtributosBasicos.AtributosBasicos(0, 0, 0, 45, 34) # --  nivel, forc
 os.system('cls')
 print("iniciando teste ... ")
 
-personagem = PersonagemBase.PersonagemBase(atributos, pontos)
+personagem = PersonagemBase.PersonagemBase(atributos, pontos, posicao)
 
 for x in range(6):
+    personagem.setPosicaoPx(x)
     personagem.setXpGanha(250)
     personagem.Prints()
 

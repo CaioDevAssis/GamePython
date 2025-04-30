@@ -4,9 +4,10 @@ import AtributosBasicos
 
 class PersonagemBase:
     
-    def __init__(self, atributos, xp):
+    def __init__(self, atributos, xp, posicao):
         self.atributos = atributos
         self.xp = xp
+        self.posicao = posicao
         
         
     ##### atributos ##### 
@@ -63,6 +64,13 @@ class PersonagemBase:
     def getXpGanha(self):
         return self.xp.getXpGanha()
         
+    ## posicaoBase ##
+    
+    def setPosicaoPx(self, valor):
+        self.posicao.setPx(valor)
+    def getPosicaoPx(self):
+        return self.posicao.getPx()
+        
     def Prints(self):
         
         print("Nivel: ",self.getAtributosNivel(),
@@ -73,4 +81,8 @@ class PersonagemBase:
         print(
             "XpTotal: ",self.getXpTotal(), " | Proximo nivel: ",self.getXpProximoNivel(),"/",self.getXpGanha()," Xpganha",
             
+        )
+        print(
+        "PosicaoPx: ",self.getPosicaoPx()
+        
         )

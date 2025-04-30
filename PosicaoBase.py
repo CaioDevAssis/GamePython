@@ -16,7 +16,7 @@ class PosicaoBase:
         return self.pxBase
         
     def setPx(self, px):
-        self.px = px
+        self.px += px
         
     def getPx(self):
         return self.px
