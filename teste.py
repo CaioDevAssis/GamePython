@@ -19,6 +19,9 @@ personagem = PersonagemBase.PersonagemBase(atributos, pontos, posicao)
 
 for x in range(6):
     personagem.setPosicaoPx(x)
+    personagem.setPosicaoPy(x)
+    personagem.setPosicaoPxBase(x)
+    personagem.setPosicaoPyBase(x)
     personagem.setXpGanha(250)
     personagem.Prints()
 

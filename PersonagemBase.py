@@ -71,6 +71,21 @@ class PersonagemBase:
     def getPosicaoPx(self):
         return self.posicao.getPx()
         
+    def setPosicaoPy(self, valor):
+        self.posicao.setPy(valor)
+    def getPosicaoPy(self):
+        return self.posicao.getPy()
+    
+    def setPosicaoPxBase(self, valor):
+        self.posicao.setPxBase(valor)
+    def getPosicaoPxBase(self):
+        return self.posicao.getPxBase()
+        
+    def setPosicaoPyBase(self, valor):
+        self.posicao.setPyBase(valor)
+    def getPosicaoPyBase(self):
+        return self.posicao.getPyBase()
+        
     def Prints(self):
         
         print("Nivel: ",self.getAtributosNivel(),
@@ -83,6 +98,7 @@ class PersonagemBase:
             
         )
         print(
-        "PosicaoPx: ",self.getPosicaoPx()
+        "PosicaoPx: ",self.getPosicaoPx()," | PosicaoPy: ", self.getPosicaoPy(),
+        " | PxBase: ",self.getPosicaoPxBase(), " | PyBase: ",self.getPosicaoPyBase()
         
         )

@@ -28,7 +28,7 @@ class PosicaoBase:
         return self.pyBase
         
     def setPy(self, py):
-        self.py = py
+        self.py += py
         
     def getPy(self):
         return self.py
