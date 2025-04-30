@@ -9,7 +9,7 @@ import PersonagemBase
 
 posicao = PosicaoBase.PosicaoBase(0, 0, 0, 0) #  -- pxBase, pyBase, px, py
 pontos = XpBase.XpBase(0, 0, 0) # -- xpTotal, nivel, xpGanha
-atributos = AtributosBasicos.AtributosBasicos(0, 0, 0, 45, 34) # --  nivel, forca, inteligencia, estamina, mana
+atributos = AtributosBasicos.AtributosBasicos(0, 0, 0, 0,45, 34) # --  nivel, forca, inteligencia, agilidade,estamina, mana
 
 
 os.system('cls')
@@ -18,6 +18,7 @@ print("iniciando teste ... ")
 personagem = PersonagemBase.PersonagemBase(atributos, pontos, posicao)
 
 for x in range(6):
+    personagem.setAtributosAgilidade(x)
     personagem.setPosicaoPx(x)
     personagem.setPosicaoPy(x)
     personagem.setPosicaoPxBase(x)

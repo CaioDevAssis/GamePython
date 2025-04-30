@@ -2,11 +2,12 @@ import math
 
 class AtributosBasicos:
     
-    def __init__(self, nivel, forca, inteligencia, estamina, mana):
+    def __init__(self, nivel, forca, inteligencia, agilidade,estamina, mana):
         
         self.nivel = nivel
         self.forca =forca
         self.inteligencia = inteligencia
+        self.agilidade = agilidade
         self.base_player = 50
         
         self.setEstaminaBase()
@@ -93,6 +94,11 @@ class AtributosBasicos:
         
     def getInteligencia(self):
         return self.inteligencia
+        
+    def setAgilidade(self, valor):
+        self.agilidade += valor
+    def getAgilidade(self):
+        return self.agilidade
         
         
     def Prints(self):

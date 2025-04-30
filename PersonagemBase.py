@@ -45,6 +45,11 @@ class PersonagemBase:
     def getAtributosInteligencia(self):
         return self.atributos.getInteligencia()
         
+    def setAtributosAgilidade(self, valor):
+        self.atributos.setAgilidade(valor)
+    def getAtributosAgilidade(self):
+        return self.atributos.getAgilidade()
+        
     ## XpBase
            
 
@@ -91,7 +96,8 @@ class PersonagemBase:
         print("Nivel: ",self.getAtributosNivel(),
         " | EstaminaBase: ",self.getAtributosEstaminaBase(), "/",self.getAtributosEstamina()," Estamina",
         " | ManaBase: ", self.getAtributosManaBase(),"/",self.getAtributosMana()," Mana",
-        " | Forca: ", self.getAtributosForca()," | Inteligencia: ",self.getAtributosInteligencia()
+        " | Forca: ", self.getAtributosForca()," | Inteligencia: ",self.getAtributosInteligencia(),
+        " | Agilidade: ", self.getAtributosAgilidade()
                 )
         print(
             "XpTotal: ",self.getXpTotal(), " | Proximo nivel: ",self.getXpProximoNivel(),"/",self.getXpGanha()," Xpganha",
